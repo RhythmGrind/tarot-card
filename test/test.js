@@ -32,7 +32,6 @@ const cards = [
     Judgement: "Judgement, rebirth, inner calling, absolution",
     TheWorld: "Completion, accomplishment, travel, perfect unity"
   };
-  
   // Get the number of cards to draw
   const numCards = cards.length;
   const CardsDraw = 3;
@@ -67,23 +66,18 @@ const cards = [
 
     const reading = generateReading(card);
 
+
+
     // Display the reading in the output box
     const output = document.getElementById("reading");
     output.innerHTML = "";
-    // output.innerHTML += `<h3>${reading.title}</h3>`;
     output.innerHTML += `<p>${reading.meaning}</p>`;
     output.innerHTML += `<p>${reading.cardM}</p>`;
+
+
     output.style.display = "block";
   }
   
-  // function generateReading(card) {
-  //   // const title = "Past, Present, Future Reading";
-  //   const meaning = `Your past card is ${card[0]}, your present card is ${card[1]}, and your future card is ${card[2]}.`;
-
-  //   return { title, meaning };
-  // }
-
-
 
   // Add an event listener to the button
   document.getElementById("draw-cards").addEventListener("click", drawCards);
@@ -99,10 +93,13 @@ const cards = [
   });
 
   function generateReading(card) {
-    // This is just an example, you can customize this to generate your own tarot readings
     // const title = "Past, Present, Future Reading";
     const meaning = `Your past card is ${card[0]}, your present card is ${card[1]}, and your future card is ${card[2]}.`;
   
     const cardM = `${card[0]} means ${cardMeanings[card[0]]}, ${card[1]} means ${cardMeanings[card[1]]},${card[2]} means ${cardMeanings[card[2]]}`;
+    
     return {cardM,meaning};
+
+
+
   }
