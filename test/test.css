@@ -21,11 +21,35 @@ body {
   }
   
   input[type="text"] {
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    /* Added/Changed: */
+    border-radius: 25px; 
+    padding: 20px;
+    border: 2.5px solid #828282;
+    text-align: center;
+    /* Original */
+    font-size: 24px;
+    /*padding: 10px;*/
+    /*border-radius: 5px;*/
+    /*border: 1px solid #ccc;*/
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
+  }
+
+  /* Added: button-container div that can be used for adjusting the group placement/stylizing
+  of the reset and draw cards buttons */
+  .button-container {
+    /* This will center the two buttons */
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Added: Used for stylizing the buttons themselves */
+  .button-container button {
+    /* change visuals later (specifically, hovering/clicking on the button)? */
+    margin: 10px;
+    font-size: 24px;
+    padding: 7.5px;
+    border-radius: 50px;
+    border-color: #828282;
   }
